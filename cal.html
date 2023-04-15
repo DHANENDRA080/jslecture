@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Calculator</title>
+    <style>
+        
+            h1 {
+                font-size: 36px;
+                font-weight: bold;
+                color: red;
+              }
+              
+        
+            
+            body {
+                background-color: navy;
+                color: white;
+              }
+              
+        
+              button {
+                background-color: #90e790;
+                color: black;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+              }
+              
+    </style>
+</head>
+<body align="center">
+    <marquee bgcolor="orange" scrollamount="5" hspace="30"> ONLINE CALCULATOR<br><p>DHANENDRA PRATAP<br>dhanendrapratap262@gmail.com</p></marquee>
+    <h1>CALCULATOR</h1>
+    <input type="number" name="first" id="first" step="any"/>
+    <select id="logic">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">x</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select id="ope">
+    <input type="number" name="second" id="second" maxlength="20px" step="any"/>
+    <br>
+    <button onclick="cal()">calculate</button>
+    <input type="text" name="" id="res" readonly=""/>
+</body>
+<script type="text/javascript">
+    function cal(){
+        var opr1 = document.getElementById('first').value;
+        var opr2 = document.getElementById('second').value;
+        var oper=document.getElementById('logic').value;
+    if(oper=='+'){
+        var res=parseInt(opr1)+parseInt(opr2);
+    }
+    if(oper=='-'){
+        var res=parseInt(opr1)-parseInt(opr2);
+    }
+    if(oper=='*'){
+        var res=parseInt(opr1)*parseInt(opr2);
+    }
+    if(oper=='/'){
+        var res=parseInt(opr1)/parseInt(opr2);
+    }
+    if(oper=='%'){
+        var res=parseInt(opr1)%parseInt(opr2);    
+    }
+document.getElementById('res').value=res;
+}
+
+</script>
+</html>
